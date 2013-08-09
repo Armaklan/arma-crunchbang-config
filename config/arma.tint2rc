@@ -1,0 +1,107 @@
+#---------------------------------------------
+# TINT2 CONFIG FILE
+#---------------------------------------------
+
+#---------------------------------------------
+# BACKGROUND AND BORDER
+#---------------------------------------------
+rounded = 0
+border_width = 0
+background_color = #000000 30
+border_color = #212120 30
+
+rounded = 0
+border_width = 0
+background_color = #1F262E 50
+border_color = #232426 0
+
+rounded = 0
+border_width = 0
+background_color = #000000 0
+border_color = #414140 0
+
+#---------------------------------------------
+# PANEL
+#---------------------------------------------
+panel_monitor = all
+panel_position = top center
+panel_size = 100% 26
+panel_margin = 0 0
+panel_padding = 2 0
+panel_items = TSC
+font_shadow = 0
+panel_background_id = 1
+wm_menu = 1
+
+#---------------------------------------------
+# TASKBAR
+#---------------------------------------------
+taskbar_mode = single_monitor
+#taskbar_mode = multi_desktop
+#taskbar_mode = all
+taskbar_padding = 0 0 0
+taskbar_background_id = 0
+
+#---------------------------------------------
+# TASKS
+#---------------------------------------------
+task_icon = 1
+task_text = 1
+task_width = 150
+task_centered = 0
+task_padding = 10 5
+task_font = Droid Sans bold 8
+task_font_color = #ffffff 70
+task_active_font_color = #ffffff 100
+task_background_id = 3
+task_active_background_id = 2
+
+#---------------------------------------------
+# LAUNCHER
+#---------------------------------------------
+launcher_padding = 0 0 3
+launcher_background_id = 0
+launcher_icon_size = 24
+# Specify icon theme names with launcher_icon_theme. 
+# if you have an XSETTINGS manager running (like xfsettingsd), tint2 will follow your current theme.
+#launcher_icon_theme = AwOkaenza II
+#launcher_item_app = /home/armaklan/.dock/chromium.desktop
+#launcher_item_app = /home/armaklan/.dock/terminator.desktop
+
+#---------------------------------------------
+# SYSTRAYBAR
+#---------------------------------------------
+systray_padding = 2 4 5
+systray_background_id = 0
+
+#---------------------------------------------
+# CLOCK   
+#---------------------------------------------
+time1_format = %d.%m.%y // %H:%M
+time1_font = DroidSans Bold 9
+clock_font_color = #ffffff 70
+clock_padding = 6 4
+clock_background_id = 0
+clock_lclick_command = orage
+#clock_rclick_command = 
+
+#---------------------------------------------
+# BATTERY
+#---------------------------------------------
+#battery = 0
+#battery_low_status = 7
+#battery_low_cmd = notify-send "battery low"
+#bat1_font = sans 8
+#bat2_font = sans 6
+#battery_font_color = #ffffff 76
+#battery_padding = 1 0
+#battery_background_id = 0
+
+
+#---------------------------------------------
+# MOUSE
+#---------------------------------------------
+mouse_middle = close
+mouse_right = none
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify

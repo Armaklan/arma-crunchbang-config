@@ -1,0 +1,50 @@
+#fichier ~/.muttrc
+
+
+#configuration du serveur
+set hostname=gmail.com
+my_hdr From: Lionel ZUBER <lionel.zuber@gmail.com>
+set use_envelope_from
+set envelope_from_address="lionel.zuber@armaklan.org"
+
+unignore Date Message-ID In-Reply-To
+
+set move=no
+set imap_user = "lionel.zuber@gmail.com"
+set imap_pass= "javacestlemal"
+set imap_authenticators="login"
+set imap_passive="no"
+set folder="imaps://imap.gmail.com:993"
+set spoolfile="+INBOX"
+set imap_check_subscribed="yes"
+set imap_list_subscribed="yes"
+
+set smtp_url="smtps://lionel.zuber:javacestlemal@smtp.gmail.com:465"
+set ssl_starttls="yes"
+
+set locale="fr_FR"
+set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
+set attribution="Le %d, %n à écrit:"
+set forward_format="[Fwd: %s]"
+set forward_quote
+
+mailboxes !
+
+set pager_index_lines="7"
+set pager_stop
+
+#enregistre les messages envoyés et brouillons dans Gmail
+set record="+[Gmail]/Messages envoyés"
+set postponed="+[Gmail]/Brouillons"
+
+#gérer un cache
+set message_cachedir="~/.mutt_msg_cache"
+set header_cache="~/.mutt_header_cache"
+
+#force l'utilisation d'un programme exterieur pour les mails en HTML
+auto_view text/html
+
+#et ici la config pour les contacts
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
