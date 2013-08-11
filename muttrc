@@ -11,7 +11,7 @@ unignore Date Message-ID In-Reply-To
 
 set move=no
 set imap_user = "lionel.zuber@gmail.com"
-set imap_pass= "javacestlemal"
+set imap_pass= "password"
 set imap_authenticators="login"
 set imap_passive="no"
 set folder="imaps://imap.gmail.com:993"
@@ -19,7 +19,7 @@ set spoolfile="+INBOX"
 set imap_check_subscribed="yes"
 set imap_list_subscribed="yes"
 
-set smtp_url="smtps://lionel.zuber:javacestlemal@smtp.gmail.com:465"
+set smtp_url="smtps://lionel.zuber:password@smtp.gmail.com:465"
 set ssl_starttls="yes"
 
 set locale="fr_FR"
