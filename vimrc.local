@@ -1,7 +1,7 @@
 " Définition de mes coordonnées
 let g:email = "lionel.zuber@armaklan.org"
 let g:user = "ZUBER Lionel"
-let g:license = "BSD"
+let g:license = "MIT"
 
 set guifont=Liberation\ Mono\ Regular\ 11
 
@@ -10,4 +10,24 @@ let g:neocomplcache_max_list = 50
 let g:neocomplcache_disable_auto_complete = 1
 
 " Theme de couleur
-colorscheme twilight256
+colorscheme mustang
+set guifont=Inconsolata\ Medium\ 11
+
+" Ne pas afficher les guides d'identation par défauts
+let g:indent_guides_enable_on_vim_startup = 0
+
+" Key binding ACK : First search word behind cursor. Second demands word
+let g:ackprg="ack-grep"
+nmap <leader>a :Ack <C-r><C-w><CR>
+nmap <leader>A :Ack ""<Left>
+
+" Manipulation de buffer
+:nmap <C-n> :bnext<CR>
+:nmap <C-p> :bprev<CR>
+
+" Recherche par tag
+:nmap <leader>] :ts <C-r><C-w><CR>
+
+" Fold level
+set foldlevel=1
+set foldnestmax=2
