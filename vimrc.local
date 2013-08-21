@@ -6,11 +6,14 @@ let g:license = "MIT"
 set guifont=Liberation\ Mono\ Regular\ 11
 
 " Configuration de la completion
-let g:neocomplcache_max_list = 50
-let g:neocomplcache_disable_auto_complete = 1
+" let g:neocomplcache_max_list = 50
+" let g:neocomplcache_disable_auto_complete = 1
 
 " Theme de couleur
-colorscheme mustang
+set t_Co=256
+"color wombat256mod
+color mustang
+set background=dark
 set guifont=Inconsolata\ Medium\ 11
 
 " Ne pas afficher les guides d'identation par défauts
@@ -28,6 +31,25 @@ nmap <leader>A :Ack ""<Left>
 " Recherche par tag
 :nmap <leader>] :ts <C-r><C-w><CR>
 
-" Fold level
-set foldlevel=1
-set foldnestmax=2
+" Folding shortcut
+map <buffer> f za
+noremap F :call ToggleFold()<CR>
+let b:folded = 1 
+
+function! ToggleFold() 
+    if !exists('b:folded')
+        let b:folded = 1
+    endif
+    if( b:folded == 0 ) 
+        exec ":set foldlevel=1" 
+        let b:folded = 1 
+    else 
+        exec "normal! zR" 
+        let b:folded = 0 
+    endif 
+endfunction
+
+" Navigation via jk sur les lignes visibles (et non réelle)
+:nmap j gj
+:nmap k gk
+
