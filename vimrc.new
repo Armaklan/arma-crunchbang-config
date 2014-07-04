@@ -1,0 +1,44 @@
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'ctrlp.vim'
+Plugin 'EasyMotion'
+Plugin 'Shougo/neocomplete.vim.git'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'honza/vim-snippets'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'The-NERD-tree'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomasr/molokai'
+Plugin 'spf13/vim-autoclose'
+Plugin 'spf13/PIV'
+Plugin 'bling/vim-airline'
+Plugin 'Tagbar'
+Plugin 'arnaud-lb/vim-php-namespace'
+	    
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Keymap
+let mapleader=","
+map <C-S-E> :NERDTreeToggle<CR>
+map <C-S-T> :TagbarToggle<CR>
+map <C-O> :CtrlPBufTag<CR>
+noremap <Leader>i :call PhpInsertUse()<CR>
+
+" Emmet configuration
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Color configuration
+colorscheme molokai
+
