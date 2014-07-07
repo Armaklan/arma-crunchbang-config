@@ -7,6 +7,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Shougo/vimproc'
 Plugin 'ctrlp.vim'
 Plugin 'EasyMotion'
 Plugin 'Shougo/neocomplete.vim.git'
@@ -24,7 +25,18 @@ Plugin 'spf13/PIV'
 Plugin 'bling/vim-airline'
 Plugin 'Tagbar'
 Plugin 'arnaud-lb/vim-php-namespace'
-	    
+Plugin 'ZoomWin'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'beyondwords/vim-twig'
+" Plugin 'docteurklein/vim-symfony'
+Plugin 'aperezdc/vim-template'
+Plugin 'Markdown'
+Plugin 'Conque-Shell'
+Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'm2mdas/phpcomplete-extended-symfony'
+Plugin 'zoom.vim'
+          
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -35,10 +47,30 @@ map <C-S-T> :TagbarToggle<CR>
 map <C-O> :CtrlPBufTag<CR>
 noremap <Leader>i :call PhpInsertUse()<CR>
 
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
+
 " Emmet configuration
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Color configuration
 colorscheme molokai
+set number
+syntax on
+set guifont=Consolas:h12:cANSI
 
+" Backup et historique
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Navigation via jk sur les lignes visibles (et non réelle)
+:nmap j gj
+:nmap k gk
+
+" Identation
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
